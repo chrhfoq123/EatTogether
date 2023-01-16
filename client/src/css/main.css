@@ -108,18 +108,44 @@
 }
 
 .peopleNum-context{
-    position: absolute;
-    left: -9.21%;
-    right: 9.21%;
-    top: 0%;
-    bottom: 0%;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
-    line-height: 39px;
     text-align: center;
 
     color: #000000;
+}
+
+.peopleNum-up{
+    position: absolute;
+    left: 78.72%;
+    right: 16.41%;
+    top: 53.55%;
+    bottom: 44.08%;
+}
+
+.peopleNum-down{
+    position: absolute;
+    left: 83.59%;
+    right: 11.54%;
+    top: 60.31%;
+    bottom: 37.32%;
+}
+
+.match-button{
+    position: absolute;
+    width: 251px;
+    height: 50px;
+    left: 69px;
+    top: 575px;
+
+    background: #D9D9D9;
+    border-radius: 10px;
+
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
 }

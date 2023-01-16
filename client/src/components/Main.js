@@ -34,6 +34,15 @@ function Main()
                 <div className="peopleNum-context">
                     인원수 : ? 명
                 </div>
+                <div className="peopelNum-up">
+                    ▲
+                </div>
+                <div className="peopleNum-down">
+                    ▼
+                </div>
+            </div>
+            <div className="match-button">
+                매칭하기
             </div>
         </div>
     )

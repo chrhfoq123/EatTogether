@@ -30,7 +30,7 @@
     top: 14px;
 }
 
-.select-menu1{
+.menu1{
     position: absolute;
     width: 63px;
     height: 57px;
@@ -41,7 +41,7 @@
     border-radius: 10px;
 }
 
-.select-menu2{
+.menu2{
     position: absolute;
     width: 63px;
     height: 57px;
@@ -52,7 +52,7 @@
     border-radius: 10px;
 }
 
-.select-menu3{
+.menu3{
     position: absolute;
     width: 63px;
     height: 57px;
@@ -63,7 +63,7 @@
     border-radius: 10px;
 }
 
-.select-menu4{
+.menu4{
     position: absolute;
     width: 63px;
     height: 57px;
@@ -74,7 +74,7 @@
     border-radius: 10px;
 }
 
-.select-menu5{
+.menu5{
     position: absolute;
     width: 63px;
     height: 57px;
@@ -85,7 +85,7 @@
     border-radius: 10px;
 }
 
-.select-menu6{
+.menu6{
     position: absolute;
     width: 63px;
     height: 57px;
@@ -94,4 +94,32 @@
 
     background: #D9D9D9;
     border-radius: 10px;
+}
+
+.peopleNum-select{
+    position: absolute;
+    width: 304px;
+    height: 75px;
+    left: 43px;
+    top: 442px;
+
+    background: #D9D9D9;
+    border-radius: 20px;
+}
+
+.peopleNum-context{
+    position: absolute;
+    left: -9.21%;
+    right: 9.21%;
+    top: 0%;
+    bottom: 0%;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 39px;
+    text-align: center;
+
+    color: #000000;
 }

@@ -10,24 +10,29 @@ function Main()
                     <img src={'./public/img/person.png'}></img>
                 </div>
             </div>
-            <div className="option-content">
-                <div className="select-menu1">
+            <div className="select-menu">
+                <div className="menu1">
                     일식그림
                 </div>
-                <div className="select-menu2">
+                <div className="menu2">
                     중식그림
                 </div>
-                <div className="select-menu3">
+                <div className="menu3">
                     양식그림
                 </div>
-                <div className="select-menu4">
+                <div className="menu4">
                     한식그림
                 </div>
-                <div className="select-menu5">
+                <div className="menu5">
                     고기그림
                 </div>
-                <div className="select-menu6">
+                <div className="menu6">
                     치킨그림
+                </div>
+            </div>
+            <div className="peopleNum-select">
+                <div className="peopleNum-context">
+                    인원수 : ? 명
                 </div>
             </div>
         </div>

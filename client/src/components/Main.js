@@ -3,42 +3,40 @@ function Main()
     return(
         <div className="main-content">
             <div className="main-header">
-                <div className="select-location">
-                    지역 선택 ▼
-                </div>
-                <div className="myinfo">
-                    <img src={'./public/img/person.png'}></img>
-                </div>
+                <p className="select-location">지역 설정 ▼</p>
+                <img className="myinfo" src="./public/img/person.png"></img>
             </div>
             <div className="select-menu">
                 <div className="menu1">
-                    일식그림
+                    <img src=""></img>
+                    <p className="context">일식</p>
                 </div>
                 <div className="menu2">
-                    중식그림
+                    <img src=""></img>
+                    <p className="context">중식</p>
                 </div>
                 <div className="menu3">
-                    양식그림
+                    <img src=""></img>
+                    <p className="context">한식</p>
                 </div>
                 <div className="menu4">
-                    한식그림
+                    <img src=""></img>
+                    <p className="context">양식</p>
                 </div>
                 <div className="menu5">
-                    고기그림
+                    <img src=""></img>
+                    <p className="context">치킨</p>
                 </div>
                 <div className="menu6">
-                    치킨그림
+                    <img src=""></img>
+                    <p className="context">고기</p>
                 </div>
             </div>
             <div className="peopleNum-select">
-                <div className="peopleNum-context">
-                    인원수 : ? 명
-                </div>
-                <div className="peopelNum-up">
-                    ▲
-                </div>
-                <div className="peopleNum-down">
-                    ▼
+                <div className="peopleNum">인원수 : ? 명</div>
+                <div className="peopleNum-btn">
+                    <div className="up-btn">▲</div>
+                    <div className="down-btn">▼</div>
                 </div>
             </div>
             <div className="match-button">

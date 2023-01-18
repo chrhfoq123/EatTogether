@@ -4,30 +4,17 @@
     position: absolute;
     width: 390px;
     height: 69px;
-    left: 0px;
-    top: 0px;
+    display: flex;
 }
 
 .select-location{
-    position: absolute;
-    width: 228px;
-    height: 40px;
-    left: 50px;
-    top: 14px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 39px;
-    text-align: center;
+    font-size: larger;
+    flex: 3;
+    padding-left: 3rem;
 }
 
 .myinfo{
-    position: absolute;
-    width: 43px;
-    height: 40px;
-    left: 327px;
-    top: 14px;
+    flex: 1;
 }
 
 .menu1{
@@ -96,6 +83,10 @@
     border-radius: 10px;
 }
 
+.context{
+    text-align: center;
+}
+
 .peopleNum-select{
     position: absolute;
     width: 304px;
@@ -105,32 +96,23 @@
 
     background: #D9D9D9;
     border-radius: 20px;
+    display: flex;
 }
 
-.peopleNum-context{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 32px;
+.peopleNum{
+    flex: 3;
     text-align: center;
-
-    color: #000000;
+    font-size: 20px;
+    border-right: 2px solid #000000;
 }
 
-.peopleNum-up{
-    position: absolute;
-    left: 78.72%;
-    right: 16.41%;
-    top: 53.55%;
-    bottom: 44.08%;
+.peopleNum-btn{
+    flex: 0.7;
 }
 
-.peopleNum-down{
-    position: absolute;
-    left: 83.59%;
-    right: 11.54%;
-    top: 60.31%;
-    bottom: 37.32%;
+.up-btn{
+    align-items: center;
+    border-bottom: 2px solid #000000;
 }
 
 .match-button{
@@ -144,7 +126,6 @@
     border-radius: 10px;
 
     text-align: center;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 32px;

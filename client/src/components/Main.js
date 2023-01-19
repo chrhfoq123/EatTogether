@@ -4,7 +4,7 @@ function Main()
         <div className="main-content">
             <div className="main-header">
                 <p className="select-location">지역 설정 ▼</p>
-                <img className="myinfo" src="img/person.png"></img>
+                <img className="myinfo-img" src="img/person.png"></img>
             </div>
             <div className="select-menu">
                 <div className="menu1">
@@ -41,6 +41,17 @@ function Main()
             </div>
             <div className="match-button">
                 매칭하기
+            </div>
+            <div className="bottom-nav">
+                <div className="main-tab">
+                    메인으로
+                </div>
+                <div className="chat-tab">
+                    채팅목록으로
+                </div>
+                <div className="myinfo-tab">
+                    내정보로
+                </div>
             </div>
         </div>
     )

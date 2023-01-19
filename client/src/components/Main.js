@@ -4,7 +4,7 @@ function Main()
         <div className="main-content">
             <div className="main-header">
                 <p className="select-location">지역 설정 ▼</p>
-                <img className="myinfo" src="./public/img/person.png"></img>
+                <img className="myinfo" src="img/person.png"></img>
             </div>
             <div className="select-menu">
                 <div className="menu1">

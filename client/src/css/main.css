@@ -130,7 +130,6 @@
     font-weight: 400;
     font-size: 32px;
 }
-
 /* Main */
 
 /* Find */
@@ -164,4 +163,36 @@
     font-style: normal;
     font-weight: 400;
     font-size: 32px;
+}
+/* Find */
+
+/* Login */
+.logoimg{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    left: 130px;
+    top: 230px;
+}
+
+.kakao-login{
+    position: absolute;
+    width: 280px;
+    height: 40px;
+    left: 65px;
+    top: 450px;
+    background: #d9d9d9;
+
+    text-align: center;
+}
+
+.google-login{
+    position: absolute;
+    width: 280px;
+    height: 40px;
+    left: 65px;
+    top: 550px;
+    background: #d9d9d9;
+
+    text-align: center;
 }

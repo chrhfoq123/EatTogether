@@ -41,17 +41,18 @@ function Main()
             <div className="match-button">
                 매칭하기
             </div>
+            {/* 추후 업데이트(하단 nav바)
             <div className="bottom-nav">
                 <div className="main-tab">
                     메인으로
                 </div>
                 <div className="chat-tab">
-                    채팅목록으로
+                    채팅으로
                 </div>
                 <div className="myinfo-tab">
                     내정보로
                 </div>
-            </div>
+            </div>*/}
         </div>
     )
 }

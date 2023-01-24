@@ -34,13 +34,17 @@ function Main()
             <div className="peopleNum-select">
                 <div className="peopleNum">인원수 : ? 명</div>
                 <div className="peopleNum-btn">
-                    <div className="up-btn">▲</div>
-                    <div className="down-btn">▼</div>
+                    <div className="peopleNum-upbtn">
+                        <button className="up-btn">▲</button>
+                    </div>
+                    <div className="peopleNum-downbtn">
+                        <button className="down-btn">▼</button>
+                    </div>
                 </div>
             </div>
-            <div className="match-button">
+            <button className="match-button">
                 매칭하기
-            </div>
+            </button>
             {/* 추후 업데이트(하단 nav바)
             <div className="bottom-nav">
                 <div className="main-tab">

@@ -8,9 +8,9 @@ function Find()
             <div className="pass-minute">
                 ~분 경과
             </div>
-            <div className="cancel-btn">
+            <button className="cancel-btn" onClick={() => {window.location.href='/'}}>
                 매칭 취소
-            </div>
+            </button>
         </div>
     )
 }

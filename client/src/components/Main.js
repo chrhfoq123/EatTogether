@@ -10,6 +10,17 @@ function Main()
     const[isClicked6, setIsClicked6] = useState(0);
     const[memberNum, setMemberNum] = useState(0);
 
+    const setMember = (option) => {
+        if(option == 1){
+            if(memberNum<6)
+                setMemberNum(memberNum+1);
+        }else{
+            if(memberNum>0)
+                setMemberNum(memberNum-1);
+        }
+
+    }
+
     return(
         <div className="main-content">
             <div className="main-header">
@@ -48,10 +59,10 @@ function Main()
                 <div className="peopleNum">인원수 : {memberNum} 명</div>
                 <div className="peopleNum-btn">
                     <div className="peopleNum-upbtn">
-                        <button className="up-btn" onClick={() => {setMemberNum(memberNum+1)}}>▲</button>
+                        <button className="up-btn" onClick={() => {setMember(1)}}>▲</button>
                     </div>
                     <div className="peopleNum-downbtn">
-                        <button className="down-btn" onClick={() => {setMemberNum(memberNum-1)}}>▼</button>
+                        <button className="down-btn" onClick={() => {setMember(0)}}>▼</button>
                     </div>
                 </div>
             </div>

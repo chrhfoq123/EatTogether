@@ -45,7 +45,7 @@ function Main()
                 지역을 입력해 주세요!                
                 <input placeholder='ex) 부산광역시, 구미시'></input>
             </div>
-            <p className="message1">어떤 음식을 먹고 싶나요?</p>
+            <p className="message">어떤 음식을 먹고 싶나요?</p>
             <div className="select-menu">
                 { menus.map((obj,index) => {
                     return <MenuItem 
@@ -56,7 +56,7 @@ function Main()
                             />
                 }) }                
             </div>
-            <p className="message2">몇 명과 함께 먹고 싶나요?</p>
+            <p className="message">몇 명과 함께 먹고 싶나요?</p>
             <div className="peopleNum-select">
                 <div className="peopleNum">인원수 : {memberNum} 명</div>
                 <div className="peopleNum-btn">

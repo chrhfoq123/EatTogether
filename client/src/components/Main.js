@@ -8,17 +8,22 @@ function Main()
     const[isClicked4, setIsClicked4] = useState(0);
     const[isClicked5, setIsClicked5] = useState(0);
     const[isClicked6, setIsClicked6] = useState(0);
-    const[memberNum, setMemberNum] = useState(0);
+    const[memberNum, setMemberNum] = useState(2);
+    const[checkedInput, setCheckedInput] = useState("");
 
     const setMember = (option) => {
         if(option == 1){
             if(memberNum<6)
                 setMemberNum(memberNum+1);
         }else{
-            if(memberNum>0)
+            if(memberNum>2)
                 setMemberNum(memberNum-1);
         }
+    }
 
+    const handleClickMenu = (e) => {
+        console.log(e.target.value);
+        setCheckedInput(e.target.value);
     }
 
     return(
@@ -28,29 +33,46 @@ function Main()
                 <input placeholder='ex) 부산광역시, 구미시'></input>
             </div>
             <div className="select-menu">
-                <div>어떤 음식을 먹고 싶은가요?</div>
-                <div className={isClicked1 ? "select-menu1 on" : "select-menu1"} onClick={() => {setIsClicked1(isClicked1 ? 0 : 1)}}>
-                    <img src=""></img>
+                <div className="select-menu1">
+                    <label key="menu1">
+                        <input type="radio" className="input-hidden" value="menu1" checked={checkedInput === "menu1"} onChange={handleClickMenu}/>
+                        <img src=""></img>
+                    </label>
                     <p className="context">일식</p>
                 </div>
-                <div className={isClicked2 ? "select-menu2 on" : "select-menu2"} onClick={() => {setIsClicked2(isClicked2 ? 0 : 1)}}>
-                    <img src=""></img>
+                <div className="select-menu2">
+                    <label key="menu2">
+                        <input type="radio" className="input-hidden" value="menu2" checked={checkedInput === "menu2"} onChange={handleClickMenu}/>
+                        <img src=""></img>
+                    </label>
                     <p className="context">중식</p>
                 </div>
-                <div className={isClicked3 ? "select-menu3 on" : "select-menu3"} onClick={() => {setIsClicked3(isClicked3 ? 0 : 1)}}>
-                    <img src=""></img>
+                <div className="select-menu3">
+                    <label key="menu3">
+                        <input type="radio" className="input-hidden" value="menu3" checked={checkedInput === "menu3"} onChange={handleClickMenu}/>
+                        <img src=""></img>
+                    </label>
                     <p className="context">한식</p>
                 </div>
-                <div className={isClicked4 ? "select-menu4 on" : "select-menu4"} onClick={() => {setIsClicked4(isClicked4 ? 0 : 1)}}>
-                    <img src=""></img>
+                <div className="select-menu4">
+                    <label key="menu4">
+                        <input type="radio" className="input-hidden" value="menu4" checked={checkedInput === "menu4"} onChange={handleClickMenu}/>
+                        <img src=""></img>
+                    </label>
                     <p className="context">양식</p>
                 </div>
-                <div className={isClicked5 ? "select-menu5 on" : "select-menu5"} onClick={() => {setIsClicked5(isClicked5 ? 0 : 1)}}>
-                    <img src=""></img>
+                <div className="select-menu5">
+                    <label key="menu5">
+                        <input type="radio" className="input-hidden" value="menu5" checked={checkedInput === "menu5"} onChange={handleClickMenu}/>
+                        <img src=""></img>
+                    </label>
                     <p className="context">치킨</p>
                 </div>
-                <div className={isClicked6 ? "select-menu6 on" : "select-menu6"} onClick={() => {setIsClicked6(isClicked6 ? 0 : 1)}}>
-                    <img src=""></img>
+                <div className="select-menu6">
+                    <label key="menu6">
+                        <input type="radio" className="input-hidden" value="menu6" checked={checkedInput === "menu6"} onChange={handleClickMenu}/>
+                        <img src=""></img>
+                    </label>
                     <p className="context">고기</p>
                 </div>
             </div>

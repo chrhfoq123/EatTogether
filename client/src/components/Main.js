@@ -2,8 +2,32 @@ import { useState } from 'react';
 
 function Main()
 {
-    const[memberNum, setMemberNum] = useState(2);
-    const[checkedInput, setCheckedInput] = useState("");
+    const[memberNum, setMemberNum] = useState(2); // 인원수
+    const[checkedInput, setCheckedInput] = useState();
+    const menus = [
+        {
+            name : "일식"
+        },
+        {
+            name : "중식"
+        },
+        {
+            name : "한식"
+        },
+        {
+            name : "양식"
+        },
+        {
+            name : "치킨"
+        },
+        {
+            name : "고기"
+        }
+    ]
+
+    const selectMenu = (index) => {
+        setCheckedInput(index);
+    }
 
     const setMember = (option) => {
         if(option == 1){
@@ -15,61 +39,24 @@ function Main()
         }
     }
 
-    const handleClickMenu = (e) => {
-        console.log(e.target.value);
-        setCheckedInput(e.target.value);
-    }
-
     return(
         <div className="main-content">
             <div className="main-header">
-                지역을 입력해 주세요!
+                지역을 입력해 주세요!                
                 <input placeholder='ex) 부산광역시, 구미시'></input>
             </div>
+            <p className="message1">어떤 음식을 먹고 싶나요?</p>
             <div className="select-menu">
-                <div className="select-menu1">
-                    <label key="menu1" className="form-radio">
-                        <input type="radio" className="input-radio" value="menu1" checked={checkedInput === "menu1"} onChange={handleClickMenu}/>
-                        <img src=""></img>
-                    </label>
-                    <p className="context">일식</p>
-                </div>
-                <div className="select-menu2">
-                    <label key="menu2" className='form-radio'>
-                        <input type="radio" className="input-radio" value="menu2" checked={checkedInput === "menu2"} onChange={handleClickMenu}/>
-                        <img src=""></img>
-                    </label>
-                    <p className="context">중식</p>
-                </div>
-                <div className="select-menu3">
-                    <label key="menu3" className="form-radio">
-                        <input type="radio" className="input-radio" value="menu3" checked={checkedInput === "menu3"} onChange={handleClickMenu}/>
-                        <img src=""></img>
-                    </label>
-                    <p className="context">한식</p>
-                </div>
-                <div className="select-menu4">
-                    <label key="menu4" className='form-radio'>
-                        <input type="radio" className="input-radio" value="menu4" checked={checkedInput === "menu4"} onChange={handleClickMenu}/>
-                        <img src=""></img>
-                    </label>
-                    <p className="context">양식</p>
-                </div>
-                <div className="select-menu5">
-                    <label key="menu5" className='form-radio'>
-                        <input type="radio" className="input-radio" value="menu5" checked={checkedInput === "menu5"} onChange={handleClickMenu}/>
-                        <img src=""></img>
-                    </label>
-                    <p className="context">치킨</p>
-                </div>
-                <div className="select-menu6">
-                    <label key="menu6" className='form-radio'>
-                        <input type="radio" className="input-radio" value="menu6" checked={checkedInput === "menu6"} onChange={handleClickMenu}/>
-                        <img src=""></img>
-                    </label>
-                    <p className="context">고기</p>
-                </div>
+                { menus.map((obj,index) => {
+                    return <MenuItem 
+                                name={obj.name} 
+                                clieckEvent={selectMenu}
+                                index={index}
+                                isSelect={index == checkedInput ? true : false}
+                            />
+                }) }                
             </div>
+            <p className="message2">몇 명과 함께 먹고 싶나요?</p>
             <div className="peopleNum-select">
                 <div className="peopleNum">인원수 : {memberNum} 명</div>
                 <div className="peopleNum-btn">
@@ -96,6 +83,16 @@ function Main()
                     내정보로
                 </div>
             </div>*/}
+        </div>
+    )
+}
+
+function MenuItem(props) {    
+    console.log(props);
+    const cname = props.isSelect ? "select-menu-item on" : "select-menu-item";
+    return(
+        <div className={cname} onClick={()=>{props.clieckEvent(props.index)}}>
+            <p className="context">{props.name}</p>
         </div>
     )
 }

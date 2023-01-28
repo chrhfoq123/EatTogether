@@ -1,23 +1,46 @@
 /* Main */
 .main-header{
     background-color: #D9D9D9;
-    position: absolute;
     width: 390px;
     height: 69px;
     text-align: center;
 }
+.main-content {
+    display: flex;
+    flex-direction: column;
+}
+.message1 {
+    text-align: center;
+}
+.message2 {
+    text-align: center;
+}
 
-input{
+input {
     margin-top: 0.5rem;
     width:250px;
 }
 
-.select-menu1{ position: absolute; width: 63px; height: 57px; left: 45px; top: 181px; background: #D9D9D9; border-radius: 10px; }
-.select-menu2{ position: absolute; width: 63px; height: 57px; left: 165px; top: 181px; background: #D9D9D9; border-radius: 10px;}
-.select-menu3{ position: absolute; width: 63px; height: 57px; left: 286px; top: 181px; background: #D9D9D9; border-radius: 10px;}
-.select-menu4{ position: absolute; width: 63px; height: 57px; left: 43px; top: 294px; background: #D9D9D9; border-radius: 10px;}
-.select-menu5{ position: absolute; width: 63px; height: 57px; left: 163px; top: 294px; background: #D9D9D9; border-radius: 10px;}
-.select-menu6{ position: absolute; width: 63px; height: 57px; left: 284px; top: 294px; background: #D9D9D9; border-radius: 10px;}
+.select-menu {
+    width: 390px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.select-menu-item {
+    width: 63px;    
+    background: #D9D9D9;
+    border-radius: 10px;
+    margin: 12px 24px;        
+    padding: 8px;
+}
+
+.select-menu-item.on {
+    background-color: #FFE146;
+}
 
 .context{
     text-align: center;
@@ -63,32 +86,6 @@ input{
 }
 /* Main */
 
-/* Nav */
-.bottom-nav{
-    position: absolute;
-    width: 390px;
-    height: 69px;
-    display: flex;
-    background: #D9D9D9;
-    bottom: 0px;
-}
-
-.main-tab{
-    flex: 1;
-    text-align: center;
-}
-
-.chat-tab{
-    flex: 1;
-    text-align: center;
-}
-
-.myinfo-tab{
-    flex: 1;
-    text-align: center;
-}
-/* Nav */
-
 /* Find */
 .find-message{
     position: absolute;
@@ -122,35 +119,3 @@ input{
     font-size: 32px;
 }
 /* Find */
-
-/* Login */
-.logoimg{
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    left: 130px;
-    top: 230px;
-}
-
-.kakao-login{
-    position: absolute;
-    width: 280px;
-    height: 40px;
-    left: 65px;
-    top: 450px;
-    background: #d9d9d9;
-
-    text-align: center;
-}
-
-.google-login{
-    position: absolute;
-    width: 280px;
-    height: 40px;
-    left: 65px;
-    top: 550px;
-    background: #d9d9d9;
-
-    text-align: center;
-}
-/* Login */

@@ -88,7 +88,6 @@ function Main()
 }
 
 function MenuItem(props) {    
-    console.log(props);
     const cname = props.isSelect ? "select-menu-item on" : "select-menu-item";
     return(
         <div className={cname} onClick={()=>{props.clieckEvent(props.index)}}>

@@ -6,6 +6,13 @@ import Find from './components/Find';
 import Login from './components/Login';
 import MyInfo from './components/MyInfo';
 import Chat from './components/Chat';
+import io from 'socket.io-client'
+
+const socket = io.connect("http://localhost:5000");
+socket.on('msg', (data) => {
+  console.log(data);
+  socket.emit('reply', '여기는 리액트');
+});
 
 function App() {
   return (

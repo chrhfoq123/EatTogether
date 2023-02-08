@@ -21,8 +21,8 @@ function App() {
         <div className='content'>
           <Routes>
             <Route path='/' element={<Main/>}/>
-            <Route path='find' element={<Find/>}/>
-            <Route path='Chat' element={<Chat/>}/>
+            <Route path='/find' element={<Find/>}/>
+            <Route path='/chat' element={<Chat/>}/>
             {/*추후 업데이트(로그인, 내정보)
             <Route path='login' element={<Login/>}/>}
             {<Route path='myinfo' element={<MyInfo/>}/>*/}

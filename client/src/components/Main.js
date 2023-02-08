@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Main()
 {
+    const[area, setArea] = useState(); //지역
     const[memberNum, setMemberNum] = useState(2); // 인원수
-    const[checkedInput, setCheckedInput] = useState();
+    const[checkedInput, setCheckedInput] = useState(); //메뉴선택 여부
     const menus = [
         {
             name : "일식"
@@ -43,7 +45,7 @@ function Main()
         <div className="main-content">
             <div className="main-header">
                 지역을 입력해 주세요!                
-                <input placeholder='ex) 부산광역시, 구미시'></input>
+                <input placeholder='ex) 부산광역시, 구미시' onChange={(event) => setArea(event.target.value)}></input>
             </div>
             <p className="message">어떤 음식을 먹고 싶나요?</p>
             <div className="select-menu">
@@ -68,9 +70,9 @@ function Main()
                     </div>
                 </div>
             </div>
-            <button className="match-button" onClick={() => {window.location.href='/Find'}}>
-                매칭하기
-            </button>
+            <Link onClick={event => (!checkedInput) || (!area) ? event.preventDefault() : null} to={`/chat?area=${area}&menu=${checkedInput}&memNum=${memberNum}`}>
+                <button className="match-button" type="submit">매칭하기</button>
+            </Link>
             {/* 추후 업데이트(하단 nav바)
             <div className="bottom-nav">
                 <div className="main-tab">

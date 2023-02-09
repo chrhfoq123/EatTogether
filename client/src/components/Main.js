@@ -41,6 +41,17 @@ function Main()
         }
     }
 
+    //매칭버튼 클릭시 예외처리 
+    const setMessage = (e) => {
+        if(!area){
+            alert("지역을 입력해 주세요");
+            e.preventDefault();
+        }else if(!checkedInput){
+            alert("음식을 선택해 주세요");
+            e.preventDefault();
+        }
+    }
+
     return(
         <div className="main-content">
             <div className="main-header">
@@ -70,7 +81,7 @@ function Main()
                     </div>
                 </div>
             </div>
-            <Link onClick={event => (!checkedInput) || (!area) ? event.preventDefault() : null} to={`/chat?area=${area}&menu=${checkedInput}&memNum=${memberNum}`}>
+            <Link onClick={(setMessage)} to={`/chat?area=${area}&menu=${checkedInput}&memNum=${memberNum}`}>
                 <button className="match-button" type="submit">매칭하기</button>
             </Link>
             {/* 추후 업데이트(하단 nav바)

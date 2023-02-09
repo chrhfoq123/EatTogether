@@ -17,7 +17,9 @@
 
 input {
     margin-top: 0.5rem;
-    width:250px;
+    width: 280px;
+    border-radius: 5px;
+    border: #000000 2px solid;
 }
 
 .select-menu {

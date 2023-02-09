@@ -41,7 +41,6 @@ function Main()
         }
     }
 
-    //매칭버튼 클릭시 예외처리 
     const setMessage = (e) => {
         if(!area){
             alert("지역을 입력해 주세요");

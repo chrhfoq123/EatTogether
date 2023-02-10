@@ -22,8 +22,10 @@ function Chat()
     }, ["http://localhost:5000", location.search]);
 
     return(
-        <div>
-            채팅
+        <div className='chat-content'>
+            <div className='chat-header'>
+                <p className='room-info'>{`${area}에서 ${menuName()}, ${memNum}명`}</p>
+            </div>
         </div>
     )
 }

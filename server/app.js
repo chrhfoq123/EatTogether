@@ -28,6 +28,9 @@ io.on('connection', (socket) => {
         console.log('클라이언트 접속 해제', ip, socket.id);
         clearInterval(socket.interval);
     });
+    socket.on('sendMessage', (message) => {
+        console.log(message);
+    })
 });
 
 app.get('/', (req, res, next) => {

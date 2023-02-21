@@ -1,0 +1,38 @@
+.find-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.find-message{
+    margin-top: 7rem;
+    padding: 5rem;
+    left: 100px;
+    top: 280px;
+
+    font-size: x-large;
+}
+
+.pass-minute{
+    margin-top: 5rem;
+    padding-left: 9rem;
+    padding-right: 9rem;
+    padding-bottom: 9rem;
+    left: 150px;
+    top: 400px;
+
+    font-size: x-large;
+}
+
+.cancel-btn{
+    margin-left: 4.3rem;
+    width: 251px;
+    height: 50px;
+
+    background: #D9D9D9;
+    border-radius: 10px;
+
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+}

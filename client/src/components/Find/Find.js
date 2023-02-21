@@ -1,3 +1,5 @@
+import './Find.css';
+
 function Find()
 {
     return(

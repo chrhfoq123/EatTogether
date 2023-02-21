@@ -3,6 +3,8 @@ import queryString from 'query-string';
 import io from 'socket.io-client';
 import { useLocation } from 'react-router-dom';
 
+import './Chat.css';
+
 let socket;
 
 function Chat()
@@ -32,6 +34,8 @@ function Chat()
             socket.emit('sendMessage', message);
         }
     }
+
+    console.log(message);
 
     return(
         <div className='chat-content'>

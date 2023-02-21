@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Main from './components/Main';
-import Find from './components/Find';
+import Main from './components/Main/Main';
+import Find from './components/Find/Find';
 import Login from './components/Login';
 import MyInfo from './components/MyInfo';
-import Chat from './components/Chat';
+import Chat from './components/Chat/Chat';
 import io from 'socket.io-client'
 
 function App() {

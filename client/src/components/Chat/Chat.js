@@ -13,7 +13,7 @@ function Chat()
     const [menu, setMenu] = useState();
     const [memNum, setMemNum] = useState();
     const [message, setMessage] = useState('');
-    const [messageHistory, setMessageHistory] = useState([]);
+    const [messages, setMessages] = useState([]);
     const location = useLocation();
 
     useEffect(() => {
@@ -27,20 +27,28 @@ function Chat()
         
     }, ["http://localhost:5000", location.search]);
 
+    useEffect(() => {
+        socket.on('receiveMessage', (message) => {
+            console.log(message);
+        })
+    })
+
     const sendMessage = (e) => {
         e.preventDefault();
 
         if(message){
-            socket.emit('sendMessage', message);
+            socket.emit('sendMessage', message, () => setMessage(''));
         }
     }
 
-    console.log(message);
 
     return(
         <div className='chat-content'>
             <div className='chat-header'>
                 <span className='room-info'>{`${area}에서 ${menu}, ${memNum}명의 채팅방`}</span>
+            </div>
+            <div className='chat-area'>
+                asdf
             </div>
             <div className='chat-box'>
                 <input value={message} onChange={(event) => setMessage(event.target.value)}></input>

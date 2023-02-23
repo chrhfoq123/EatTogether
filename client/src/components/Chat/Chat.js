@@ -12,8 +12,8 @@ function Chat()
     const [area, setArea] = useState();
     const [menu, setMenu] = useState();
     const [memNum, setMemNum] = useState();
-    const [message, setMessage] = useState('');
-    const [messages, setMessages] = useState([]);
+    const [message, setMessage] = useState(''); //서버에서 받은 내용
+    const [messages, setMessages] = useState(''); //기존의 채팅내용 ui와 연결됌
     const location = useLocation();
 
     useEffect(() => {
@@ -29,9 +29,10 @@ function Chat()
 
     useEffect(() => {
         socket.on('receiveMessage', (message) => {
+            setMessages(message);
             console.log(message);
-        })
-    })
+        });
+    }, []);
 
     const sendMessage = (e) => {
         e.preventDefault();
@@ -41,14 +42,15 @@ function Chat()
         }
     }
 
-
     return(
         <div className='chat-content'>
             <div className='chat-header'>
                 <span className='room-info'>{`${area}에서 ${menu}, ${memNum}명의 채팅방`}</span>
             </div>
             <div className='chat-area'>
-                asdf
+                <div className='chat-text'>
+                    {messages}
+                </div>
             </div>
             <div className='chat-box'>
                 <input value={message} onChange={(event) => setMessage(event.target.value)}></input>

@@ -70,7 +70,7 @@ function Main()
                             />
                 }) }                
             </div>
-            <p className="message">몇 명과 함께 먹고 싶나요?</p>
+            <p className="message">몇 명에서 먹고 싶나요?</p>
             <div className="peopleNum-select">
                 <div className="peopleNum">인원수 : {memberNum} 명</div>
                 <div className="peopleNum-btn">

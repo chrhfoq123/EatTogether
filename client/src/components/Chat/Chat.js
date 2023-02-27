@@ -13,7 +13,7 @@ function Chat()
     const [menu, setMenu] = useState();
     const [memNum, setMemNum] = useState();
     const [message, setMessage] = useState(''); //서버에서 받은 내용
-    const [messages, setMessages] = useState(''); //기존의 채팅내용 ui와 연결됌
+    const [messages, setMessages] = useState([]); //기존의 채팅내용 ui와 연결됌
     const location = useLocation();
 
     useEffect(() => {
@@ -29,16 +29,16 @@ function Chat()
 
     useEffect(() => {
         socket.on('receiveMessage', (message) => {
-            setMessages(message);
+            setMessages([...messages, message]);
             console.log(message);
         });
-    }, []);
+    }, [messages]);
 
     const sendMessage = (e) => {
         e.preventDefault();
 
         if(message){
-            socket.emit('sendMessage', message, () => setMessage(''));
+            socket.emit('sendMessage', message);
         }
     }
 
@@ -49,7 +49,13 @@ function Chat()
             </div>
             <div className='chat-area'>
                 <div className='chat-text'>
-                    {messages}
+                    {messages.map((message, index) => {
+                        console.log(message.text);
+                        return(<div key={index}>
+                            {message.text}
+                        </div>
+                        )
+                    })}
                 </div>
             </div>
             <div className='chat-box'>

@@ -50,7 +50,6 @@ function Chat()
             <div className='chat-area'>
                 <div className='chat-text'>
                     {messages.map((message, index) => {
-                        console.log(message.text);
                         return(<div key={index}>
                             {message.text}
                         </div>
@@ -59,7 +58,7 @@ function Chat()
                 </div>
             </div>
             <div className='chat-box'>
-                <input value={message} onChange={(event) => setMessage(event.target.value)}></input>
+                <input onChange={(event) => setMessage(event.target.value)}></input>
                 <button className='send-btn' onClick={(event) => sendMessage(event)}>전송</button>
             </div>
         </div>
